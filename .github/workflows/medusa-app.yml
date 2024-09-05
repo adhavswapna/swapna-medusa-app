@@ -38,8 +38,8 @@ jobs:
       - name: Deploy to Amazon ECS
         uses: aws-actions/amazon-ecs-deploy-task-definition@v1
         with:
-          cluster: your-ecs-cluster-name
-          service: your-ecs-service-name
-          task-definition: your-task-definition.json
+          cluster: medusa-ecs-cluster
+          service: medusa_service
+          task-definition: medusa_task.json
           container-name: medusa-container
           image: swapnaswapna/medusa-app-docker:latest
