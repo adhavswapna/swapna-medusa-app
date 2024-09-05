@@ -20,11 +20,11 @@ jobs:
 
       # Step 3: Build the Docker image
       - name: Build Docker image
-        run: docker build -t your-dockerhub-username/medusa-app:latest .
+        run: docker build -t swapnaswapna/medusa-app-docker/medusa-app:latest .
 
       # Step 4: Push Docker image to Docker Hub
       - name: Push Docker image to Docker Hub
-        run: docker push your-dockerhub-username/medusa-app:latest
+        run: docker push swapnaswapna/medusa-app-docker:latest
 
       # Step 5: Configure AWS credentials
       - name: Configure AWS credentials
@@ -42,4 +42,4 @@ jobs:
           service: your-ecs-service-name
           task-definition: your-task-definition.json
           container-name: medusa-container
-          image: your-dockerhub-username/medusa-app:latest
+          image: swapnaswapna/medusa-app-docker:latest
