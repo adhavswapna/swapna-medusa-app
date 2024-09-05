@@ -10,12 +10,12 @@ output "ecs_cluster_name" {
 
 # Output ECS Service Name
 output "ecs_service_name" {
-  value       = aws_ecs_service.nginx_service.name
+  value       = aws_ecs_service.medusa_service.name
 }
 
 # Output ECS Task Definition ARN
 output "ecs_task_definition_arn" {
-  value       = aws_ecs_task_definition.nginx_task.arn
+  value       = aws_ecs_task_definition.medusa_task.arn
 }
 
 # Output Spot Auto Scaling Group Name
